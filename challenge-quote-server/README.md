@@ -41,7 +41,7 @@ Note that the quotes have already been loaded for you from a JSON file.
 
 Test that your server successfully serves all of the quotes as json by making a request for /quotes from your new server.
 
-## Add a `quotes/random` route
+## Add a `/quotes/random` route
 
 Add a `/quotes/random` route to return _ONE_ of the quotes, picked randomly on each request.
 

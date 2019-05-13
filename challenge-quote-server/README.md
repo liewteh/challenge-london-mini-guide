@@ -70,7 +70,7 @@ Well done!
 
 - Use the same code to serve something other than quotes - maybe revision notes, proverbs, or other data that you want to be reminded about.
 
-## Challenge: Advanced: Use a library to make random picking easier
+## Challenge: Intermediate: Use a library to make random picking easier
 
 In the real world, many developers would use a library like [lodash](https://lodash.com/) to make it simpler to do tasks like picking randomly from an array.
 
@@ -78,15 +78,21 @@ In this extra challenge, you should install and use lodash to do the picking.
 
 [Here's the documentation for its sample() function](https://lodash.com/docs/4.17.11#sample).
 
-Install the lodash library by adding a dependency line in `package.json` - glitch will automatically install it.
+Install the lodash library: 
+- edit the file `package.json`...
+- add a line for lodash in the dependencies (you'll already see one for "express").  
+- You can use "*" as the version number for now.
+- Glitch will automatically install it.
 
-Remember to add a "require" line in your server.js
+Add a "require" line in your server.js so that you can use the library.
 
 `const lodash = require('lodash');`
 
 then you can use...
 
 `lodash.sample(myArray)`
+
+This is the same process for almost ANY library you can find on [https://www.npmjs.com/](npm).
 
 ## Challenge: Advanced: Add a React app as a front-end
 

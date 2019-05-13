@@ -96,6 +96,8 @@ This is the same process for almost ANY library you can find on [https://www.npm
 
 ## Challenge: Advanced: Add a React app as a front-end
 
+Note: only do this if you have done all other Node homework this week - that is the priority.
+
 - Make a very simple React app called quotes-react-app
 - Have it fetch a random quote from your server on glitch
 - (Bonus: Allow the user to get a new random quote from the server, by clicking a button or clicking the quote.)

@@ -21,9 +21,9 @@ Your server must have at least these two "routes":
 - `/quotes` - returns ALL of the quotes, as JSON.
 - `/quotes/random` - returns ONE of the quotes, picked differently at random each time it is requested.
 
-A list of quotes (in JSON format) is provided in this repo [quotes.json](./quotes.json), but it will also be included in the starter project on glitch.
+A list of quotes (in JSON format) is provided in this repo [quotes.json](./quotes.json), but it will also be included in the starter project on glitch.  Each quote is a simple object with a quote and an author.
 
-Try to do this challenge without looking at the tasks below.
+Try to use what you know to do this challenge on your own.  However, there are some steps to guide you, below.
 
 ## Start by remixing our example server
 

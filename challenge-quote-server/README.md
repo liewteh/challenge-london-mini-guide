@@ -27,7 +27,8 @@ Try to use what you know to do this challenge on your own.  However, there are s
 
 ## Start by remixing our example server
 
-- Remix [this server on glitch](https://glitch.com/~cyf-quotes-start)
+- Remix [this server on glitch - 
+https://glitch.com/~cyf-quotes-start](https://glitch.com/~cyf-quotes-start)
 - Name your new server `yourname-quote-server`
 - Make sure you're logged in so that it saves
 - Check that it is working by making a request to `/`
@@ -62,7 +63,6 @@ Well done!
 - You might want to download your project for safekeeping. (Tools: Git, Import, and Export: Download Project)
 - Read the following ideas for further work
 
-https://glitch.com/~cyf-quotes-start
 
 ### Ideas for further work
 

@@ -41,7 +41,7 @@ Note that the quotes have already been loaded for you from a JSON file.
 
 Test that your server successfully serves all of the quotes as json by making a request for /quotes from your new server.
 
-## Add a `quotes` random route
+## Add a `quotes/random` route
 
 Add a `/quotes/random` route to return _ONE_ of the quotes, picked randomly on each request.
 
@@ -101,3 +101,9 @@ then you can use...
 Here's an example of how your react app might look.
 Note I didn't add a "get new quote" button here.
 ![Example Screenshot of React App](./screenshots/example_react_quotes_app.png)
+
+
+
+### Credits
+
+I found the quotes list here https://gist.githubusercontent.com/nasrulhazim/54b659e43b1035215cd0ba1d4577ee80/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json

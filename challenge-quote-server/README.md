@@ -58,6 +58,7 @@ app.get('/two', function(request, response) {
   response.send("You asked for route /two")
 });
 ```
+You can refer to this short [Basic Routing](https://expressjs.com/en/starter/basic-routing.html) document for discussion on what each part does.
 
 ## Add a `/quotes/random` route
 

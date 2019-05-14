@@ -42,6 +42,23 @@ Note that the quotes have already been loaded for you from a JSON file.
 
 Test that your server successfully serves all of the quotes as json by making a request for /quotes from your new server.
 
+
+### Help - how do I add a route?
+
+To add a new route, you can copy-paste an existing route and change its parameters.
+
+For example, here are two (very boring) routes
+
+```
+app.get('/one', function(request, response) {
+  response.send("You asked for route /one")
+});
+
+app.get('/two', function(request, response) {
+  response.send("You asked for route /two")
+});
+```
+
 ## Add a `/quotes/random` route
 
 Add a `/quotes/random` route to return _ONE_ of the quotes, picked randomly on each request.

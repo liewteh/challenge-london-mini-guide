@@ -117,7 +117,7 @@ This is the same process for almost ANY library you can find on [https://www.npm
 Note: only do this if you have done all other Node homework this week - that is the priority.
 
 - Make a very simple React app called quotes-react-app
-- Have it fetch a random quote from your server on glitch
+- Have it fetch a random quote from your server on glitch.  You'll have to enable CORS on the express app. See below.
 - (Bonus: Allow the user to get a new random quote from the server, by clicking a button or clicking the quote.)
 - Host your react app on netlify
 - Post the URL to your hosted React app on Slack, and in your google classroom submission (along with your glitch server url)
@@ -127,6 +127,18 @@ Note: only do this if you have done all other Node homework this week - that is 
 Here's an example of how your react app might look.
 Note I didn't add a "get new quote" button here.
 ![Example Screenshot of React App](./screenshots/example_react_quotes_app.png)
+
+#### Enabling CORS on the Express app
+
+You'll have to enable CORS in order to allow your JSON to be loaded from a different server (glitch.me) than your React app was initially loaded (probably netlify.com).
+
+`var cors = require('cors')`
+
+and 
+
+`app.use(cors())`
+
+Read more at https://expressjs.com/en/resources/middleware/cors.html
 
 
 

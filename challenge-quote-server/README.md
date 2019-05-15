@@ -21,14 +21,14 @@ Your server must have at least these two "routes":
 - `/quotes` - returns ALL of the quotes, as JSON.
 - `/quotes/random` - returns ONE of the quotes, picked differently at random each time it is requested.
 
-A list of quotes (in JSON format) is provided in this repo [quotes.json](./quotes.json), but it will also be included in the starter project on glitch.  Each quote is a simple object with a quote and an author.
+A list of quotes (in JSON format) is provided in this repo [quotes.json](./quotes.json), but it will also be included in the starter project on glitch. Each quote is a simple object with a quote and an author.
 
-Try to use what you know to do this challenge on your own.  However, there are some steps to guide you, below.
+Try to use what you know to do this challenge on your own. However, there are some steps to guide you, below.
 
 ## Start by remixing our example server
 
-- Remix [this server on glitch - 
-https://glitch.com/~cyf-quotes-start](https://glitch.com/~cyf-quotes-start)
+- Remix [this server on glitch -
+  https://glitch.com/~cyf-quotes-start](https://glitch.com/~cyf-quotes-start)
 - Name your new server `yourname-quote-server`
 - Make sure you're logged in so that it saves
 - Check that it is working by making a request to `/`
@@ -41,7 +41,6 @@ Add a `/quotes` route to return _all_ of the quotes as JSON.
 Note that the quotes have already been loaded for you from a JSON file.
 
 Test that your server successfully serves all of the quotes as json by making a request for /quotes from your new server.
-
 
 ### Help - how do I add a route?
 
@@ -58,6 +57,7 @@ app.get('/two', function(request, response) {
   response.send("You asked for route /two")
 });
 ```
+
 You can refer to this short [Basic Routing](https://expressjs.com/en/starter/basic-routing.html) document for discussion on what each part does.
 
 ## Add a `/quotes/random` route
@@ -81,7 +81,6 @@ Well done!
 - You might want to download your project for safekeeping. (Tools: Git, Import, and Export: Download Project)
 - Read the following ideas for further work
 
-
 ### Ideas for further work
 
 - Use YOUR favourite quotes
@@ -96,10 +95,11 @@ In this extra challenge, you should install and use lodash to do the picking.
 
 [Here's the documentation for its sample() function](https://lodash.com/docs/4.17.11#sample).
 
-Install the lodash library: 
+Install the lodash library:
+
 - edit the file `package.json`...
-- add a line for lodash in the dependencies (you'll already see one for "express").  
-- You can use "*" as the version number for now.
+- add a line for lodash in the dependencies (you'll already see one for "express").
+- You can use "\*" as the version number for now.
 - Glitch will automatically install it.
 
 Add a "require" line in your server.js so that you can use the library.
@@ -117,7 +117,7 @@ This is the same process for almost ANY library you can find on [https://www.npm
 Note: only do this if you have done all other Node homework this week - that is the priority.
 
 - Make a very simple React app called quotes-react-app
-- Have it fetch a random quote from your server on glitch.  You'll have to enable CORS on the express app. See below.
+- Have it fetch a random quote from your server on glitch. You'll have to enable CORS on the express app. See below.
 - (Bonus: Allow the user to get a new random quote from the server, by clicking a button or clicking the quote.)
 - Host your react app on netlify
 - Post the URL to your hosted React app on Slack, and in your google classroom submission (along with your glitch server url)
@@ -132,19 +132,18 @@ Note I didn't add a "get new quote" button here.
 
 You'll have to install and enable CORS in order to allow your JSON to be loaded from a different server (glitch.me) than your React app was initially loaded (probably netlify.com).
 
-in `package.json` add a dependency for ```"cors": "^2.8.5"```
+in `package.json` add a dependency for `"cors": "^2.8.5"`
 
 Then in your `server.js` add...
 
 `var cors = require('cors')`
 
-and 
+and
 
 `app.use(cors())`
 
-Read more at https://expressjs.com/en/resources/middleware/cors.html
-
-
+Read more or CORS [here](https://codeyourfuture.github.io/syllabus-master/others/cors.html)
+and in CORS in Express [here](https://expressjs.com/en/resources/middleware/cors.html).
 
 ### Credits
 

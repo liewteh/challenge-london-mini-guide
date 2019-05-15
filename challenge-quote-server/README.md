@@ -81,6 +81,86 @@ Well done!
 - You might want to download your project for safekeeping. (Tools: Git, Import, and Export: Download Project)
 - Read the following ideas for further work
 
+## Level 2 Challenge - allow quote _searches_!
+
+### Overview
+
+In this level of the challenge you will allow the user of your quotes API to _search_ your list of quotes.
+
+It should work with requests like this one:
+
+- `/quotes/search?term=life`
+- `/quotes/search?term=success`
+- `/quotes/search?term=miss`
+
+Extra (bonus) requirements:
+
+- bonus: make your search case-insensitive
+- bonus: make the search return matches on quote OR author text.
+
+### Go ahead!
+
+If you think you know how to do that, go ahead!
+
+### In more detail
+
+#### Algorithm
+
+1. receive a search term (a string) to look for
+2. then find any quotes that contain that string in their quote text
+3. then return only those matching quotes
+
+As with `/quotes`, your new route should return a JSON array of quotes. If you find none that match, it should return an empty array, `[]`.
+
+#### Getting parameter(s) from the URL
+
+We have to learn how to get the search term from the user. This is very easy to program, but you should read on to understand what is going on.
+
+Users of the API will add their search term to their URL with a _query parameter_ called `term`.
+
+So, for example, if the user wanted to search for quotes about life, their HTTP request might have this target: `/quotes/search?term=life`
+
+You should [read about the query string part of the URL, here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web).
+
+#### So, how do I get these query parameters when using Express?
+
+Look at [the code of this example glitch](https://glitch.com/~cyf-query-params).
+
+Then use it by clicking these links and then changing the search word.
+
+- https://cyf-query-params.glitch.me/search?word=Mussie
+- https://cyf-query-params.glitch.me/search?word=holiday
+
+In express, we use the object `req.query`, which will have all the parameters passed to us in the URL's query string. [The official documentation is here](https://expressjs.com/en/api.html#req.query).
+
+#### An intermediate step - echo the parameter
+
+Once you think you understand the above you might want to make a simple test route that takes a query parameter and just repeats the word back to the user.
+
+e.g. `/echo?word=ismail` should just return `You said 'ismail'`
+
+then _finally_ you'll be ready to use this variable in searching through your quotes!
+
+### Searching for quotes - a pure JS exercise
+
+Once you know which word you are searching for, the next task is really a pure javascript task.
+
+Searching through your list of quotes to find ones whose text includes that word... this is done no differently in Express or Node than in pure javascript.
+
+So I suggest you first get it working in pure javascript. That will give you less to think about.
+
+[Here is an example pure-javascript project for developing this part of your code](https://repl.it/@enz0/findMatchingQuotes). But you could do the same in your local development environment.
+
+Once you've got that working, you can copy-paste your function into your Express app and use it.
+
+## End of Level 2 challenge!
+
+Well done!
+
+- Mark the relevant Google Classroom assignment done, but _before you do_, add your two links (1 for the glitch project and 1 for your server address) as _link attachments_ to the assignment. (Instructions on this are in the assignment)
+
+- Also post the two links (as one message) [in THIS thread on Slack](https://codeyourfuture.slack.com/archives/CEDK6JPKQ/p1557924290017700).
+
 ### Ideas for further work
 
 - Use YOUR favourite quotes

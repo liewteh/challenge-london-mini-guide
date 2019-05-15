@@ -42,6 +42,24 @@ Note that the quotes have already been loaded for you from a JSON file.
 
 Test that your server successfully serves all of the quotes as json by making a request for /quotes from your new server.
 
+
+### Help - how do I add a route?
+
+To add a new route, you can copy-paste an existing route and change its parameters.
+
+For example, here are two (very boring) routes
+
+```
+app.get('/one', function(request, response) {
+  response.send("You asked for route /one")
+});
+
+app.get('/two', function(request, response) {
+  response.send("You asked for route /two")
+});
+```
+You can refer to this short [Basic Routing](https://expressjs.com/en/starter/basic-routing.html) document for discussion on what each part does.
+
 ## Add a `/quotes/random` route
 
 Add a `/quotes/random` route to return _ONE_ of the quotes, picked randomly on each request.
@@ -99,7 +117,7 @@ This is the same process for almost ANY library you can find on [https://www.npm
 Note: only do this if you have done all other Node homework this week - that is the priority.
 
 - Make a very simple React app called quotes-react-app
-- Have it fetch a random quote from your server on glitch
+- Have it fetch a random quote from your server on glitch.  You'll have to enable CORS on the express app. See below.
 - (Bonus: Allow the user to get a new random quote from the server, by clicking a button or clicking the quote.)
 - Host your react app on netlify
 - Post the URL to your hosted React app on Slack, and in your google classroom submission (along with your glitch server url)
@@ -109,6 +127,22 @@ Note: only do this if you have done all other Node homework this week - that is 
 Here's an example of how your react app might look.
 Note I didn't add a "get new quote" button here.
 ![Example Screenshot of React App](./screenshots/example_react_quotes_app.png)
+
+#### Enabling CORS on the Express app
+
+You'll have to install and enable CORS in order to allow your JSON to be loaded from a different server (glitch.me) than your React app was initially loaded (probably netlify.com).
+
+in `package.json` add a dependency for ```"cors": "^2.8.5"```
+
+Then in your `server.js` add...
+
+`var cors = require('cors')`
+
+and 
+
+`app.use(cors())`
+
+Read more at https://expressjs.com/en/resources/middleware/cors.html
 
 
 

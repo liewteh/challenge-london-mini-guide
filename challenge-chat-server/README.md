@@ -89,15 +89,14 @@ In this case your server should return a status code of `400`.
 
 (Advanced note: people don't actually agree on the best status code for this situation.)
 
-## Level 3 Challenge - more read functionality
+## Level 3 - more "read" functionality
 
 For this level your API _must_ also allow a client to:
 
-- Read only messages whose text contains a specific substring
-- Read all messages by any author whose name contains a given string
-- Read only the most recent 10 messages
+- Read *only* messages whose text contains a given substring: `/messages/search?text=express`
+- Read only the most recent 10 messages: `/messages/latest`
 
-## Level 4 - add a timestamp, `timeSent`
+## Level 4 - Optional - add a timestamp, `timeSent`
 
 For this level, the server must store a timestamp in each message object, in a field called "timeSent".
 

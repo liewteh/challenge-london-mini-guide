@@ -119,7 +119,7 @@ Note: Do not use `create-react-app` if you want your React code to be code-revie
 #### Optionally, your UI may also:
 
 - Load and re-display the latest messages every 30 seconds.
-- Allow the user to use as much as possible of the back-end that you developed in levels 1-4.
+- Allow the user to use as much as possible of the back-end that you developed in levels 1-4 (e.g. message search).
 
 #### Don't forget:
 

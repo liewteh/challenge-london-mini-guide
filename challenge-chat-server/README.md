@@ -2,54 +2,67 @@
 
 ### How long will this take?
 
-- 1 hour (level 1)
-- 3-4 hours (advanced level)
+- 2 hours (Level 1)
 
 ## Overview: what is this challenge?
 
-In this challenge you must make a server (using Node and Express) which maintains a list of chat messages, in JSON form. A simple front-end has been provided to allow you to test some functionality.
+In this challenge you must make an Express app which provides an API to manage a list of chat messages, in JSON format.
 
-In the optional final part of this challenge, you also make a React app which allows you to read, add and delete messages, backed by your new server.
+A simple front-end has been provided to allow you to test _some_ of the functionality.
 
-## TODO: screenshot or link to working client backed by working (obfuscated?) demo API
+In the optional 'React' part of this challenge, you also make a React app which allows you to read, add and delete messages, backed by your new server.
+
+## Pre-reqs
+
+- You should have completed at least Level 1 of the Quote Server challenge before attempting this challenge.
 
 ## Level 1 Challenge - make the chat server
 
-Your API _must_ support at least:
+Your API _must_ _at_ _least_ allow a client to:
 
 - Create a new message
-- Read all messages in _descending_ chronological order.
+- Read all messages
 - Delete a message, by ID
 - Read one message specified by an ID
 
-You may also wish to add:
-
-- Read all messages by a specific author.
-- Filter messages by content
-- Update of a message. We'll cover this in week 3.
-
 All message content should be passed as JSON.
 
-TODO: provide 1000 random messages to allow testing of filter, etc, with a larger dataset.
-
-### A note on security
-
-There is intentionally no security or ownership of messages - anyone can delete a message on your server. This is a big topic for further study.
+Your routes should match the patterns established in class and in the Quote Server homework. See the later section "Correct Routes" if you need the answer.
 
 ### Data model
 
 Each chat message is an object with the following properties:
 
-| Name     | Type     | Example  |
-| -------- | -------- | -------- |
-| id       | number   | 17       |
-| from     | string   | "neill"  |
-| text     | string   | "hi CYF! |
-| timeSent | DateTime | TODO     |
+| Name | Type   | Example  |
+| ---- | ------ | -------- |
+| id   | number | 17       |
+| from | string | "Neill"  |
+| text | string | "hi CYF! |
 
-Try to use what you know to do this challenge on your own. However, there are some steps to guide you, below.
+## A note on security
 
-### Suggested Routes (Spoiler)
+There is intentionally no security or ownership of messages - anyone can delete one or all messages on your server.
+
+This is a big topic for further study. We won't try to cover it in this challenge.
+
+## Start by remixing our example server
+
+- Remix [this server on glitch -
+  https://glitch.com/~cyf-chat-start](https://glitch.com/~cyf-chat-start)
+- Name your new server `yourname-chat-server`
+- Make sure you're logged in so that it saves
+- Check that it is working by making a request to `/`
+- Take time to read the comments
+
+## Go ahead!
+
+If you think you know how to do that, go ahead!
+
+Try to use what you know to do this challenge on your own. It does not require any new knowledge.
+
+You may find useful the [express cheatsheet](https://github.com/nbogie/express-notes/blob/master/express-cheatsheet.md)
+
+### Correct Routes (Spoiler)
 
 | method | example path | behaviour              |
 | ------ | ------------ | ---------------------- |
@@ -58,56 +71,85 @@ Try to use what you know to do this challenge on your own. However, there are so
 | POST   | /messages    | create a new message   |
 | DELETE | /messages/17 | delete a message by id |
 
-## Start by remixing our example server
-
-- Remix [this server on glitch -
-  https://glitch.com/~cyf-quotes-start](https://glitch.com/~cyf-chat-start)
-- Name your new server `yourname-chat-server`
-- Make sure you're logged in so that it saves
-- Check that it is working by making a request to `/`
-- Take time to read the comments
-
-## Add a `/messages` route
-
-Add a `/messages` route to return _all_ of the messages as JSON.
-
-Test that your server successfully serves all of the messages as JSON by making a request for /messages from your new server.
-
-## Now do the other routes!
-
 ## End of Level 1 challenge!
 
 Well done!
 
+What to do now:
+
 - _Don't_ post on slack, unless there's a thread announced specifically for it.
-- Instead, post the URLs when you mark your google classroom assignment done.
+- Instead, attach the URLs as links when you "mark done" your assignment in Google Classroom.
 - You might want to download your project for safekeeping. (Tools: Git, Import, and Export: Download Project)
-- Read the following ideas for further work
 
-### Go ahead!
+## Level 2 - simple validation
 
-If you think you know how to do that, go ahead!
+For this level, your server must _reject_ requests to create messages if the message objects have an empty or missing `text` or `from` property.
 
-### In more detail
+In this case your server should return a status code of `400`.
 
-### Ideas for further work
+(Advanced note: people don't actually agree on the best status code for this situation.)
+
+## Level 3 Challenge - more read functionality
+
+For this level your API _must_ also allow a client to:
+
+- Read only messages whose text contains a specific substring
+- Read all messages by any author whose name contains a given string
+- Read only the most recent 10 messages
+
+## Level 4
+
+For this level, the server must store a timestamp in each message object, in a field called "timeSent".
+
+This should be set to the current time when the server first receives the message. This should be a DateTime object, which can be created with `new Date()`. It will NOT be submitted by the client.
+
+## Level 5 - add message _update_ functionality
+
+If you want, you can also add support for the client to be able to _update_ a message's `text` or `from` property. We'll cover this in the next week of the module, but you can research it easily.
+
+Your server should NOT update the `timeSent` timestamp property during an update, if the client passes it back to you.
+
+TODO: provide 1000 random messages to allow testing of filter, etc, with a larger dataset.
 
 ## Challenge: Advanced: Add a React app as a front-end
 
-Note: only do this if you have done all other Node homework this week - that is the priority.
+Note: only do this if you have done all other Node homework this week - including Levels 1-3 of this challenge. The priority during the node module is _node_!
 
 - Make a very simple React app called chat-react-app
-- You'll have to enable CORS on the express app.
-- Host your react app on netlify
-- Post the URL to your hosted React app on Slack, and in your google classroom submission (along with your glitch server url)
-- Host your code on github
-- Link your application from your portfolio.
+
+Note: Do not use `create-react-app` if you want your React code to be code-reviewed! Instead, you should fork our starting repo. See "How should I start my React app", below.
+
+Your UI should at least:
+
+- Display the latest messages on load
+- Provide a "see latest" button to fetch and display the latest messages
+- Provide a "delete" button or a clickable icon next to each message. When clicked this should delete the message from the server and then from the local display.
+
+Optionally, your UI may also:
+
+- Load and re-display the latest messages every 30 seconds.
+- Allow the user to use as much as possible of the back-end that you developed in levels 1-4.
+
+* You'll have to enable CORS on the express app.
+* Host your react app on netlify
+* Attach the link in your google classroom submission (along with your glitch server url)
+* Link your application from your portfolio.
+
+#### How should I start my React app?
+
+To make code review easier for us, please fork our starting repo. Then you can create a PR when you want a code review.
+
+The repo is here: https://github.com/CodeYourFuture/cyf-chat-react
+
+- Follow the "Making a Pull Request" guide on https://codeyourfuture.github.io/syllabus-master/others/making-a-pull-request.html
+
+- Note that this repo was made by simply running `create-react-app` exactly as you have done in the past. There is nothing special about it!
 
 ### Example screenshot of Simple React app
 
 Here's an example of how your react app might look.
-Note I didn't add a "get new quote" button here.
-![Example Screenshot of React App](./screenshots/example_react_quotes_app.png)
+
+![Example Screenshot of React App](./screenshots/example_react_chat_app.png)
 
 #### Enabling CORS on the Express app
 
@@ -115,11 +157,11 @@ You'll have to install and enable CORS on your server in order to allow your JSO
 
 (Your react app has probably been loaded from the `netlify.com` domain and your server is at `glitch.me`).
 
-On your express project on glitch, edit your `package.json` to add a dependency for `"cors": "^2.8.5"`
+On your express project on glitch, edit your `package.json` to add a dependency for the latest version of cors (e.g. `"cors": "^2.8.5"`)
 
 Then in your `server.js` add...
 
-`var cors = require('cors')`
+`const cors = require('cors')`
 
 and
 
@@ -127,5 +169,3 @@ and
 
 Read more or CORS [here](https://codeyourfuture.github.io/syllabus-master/others/cors.html)
 and in CORS in Express [here](https://expressjs.com/en/resources/middleware/cors.html).
-
-### Credits

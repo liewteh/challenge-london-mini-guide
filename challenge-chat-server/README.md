@@ -41,12 +41,6 @@ Each chat message is an object with the following properties:
 | from | string | "Neill"  |
 | text | string | "hi CYF! |
 
-## A note on security
-
-There is intentionally no security or ownership of messages - anyone can delete one or all messages on your server.
-
-This is a big topic for further study. We won't try to cover it in this challenge.
-
 ## Start by remixing our example server
 
 - Remix [this server on glitch -
@@ -90,6 +84,12 @@ For this level, your server must _reject_ requests to create messages if the mes
 In this case your server should return a status code of `400`.
 
 (Advanced note: people don't actually agree on the best status code for this situation.)
+
+### A note on security
+
+There is intentionally no security or ownership of messages - anyone can delete one or all messages on your server.
+
+This is a big topic for further study. We won't try to cover it in this challenge.
 
 ## Level 3 - more "read" functionality
 

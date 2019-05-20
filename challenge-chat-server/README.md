@@ -97,13 +97,13 @@ For this level your API _must_ also allow a client to:
 - Read all messages by any author whose name contains a given string
 - Read only the most recent 10 messages
 
-## Level 4
+## Level 4 - add a timestamp, `timeSent`
 
 For this level, the server must store a timestamp in each message object, in a field called "timeSent".
 
 This should be set to the current time when the server first receives the message. This should be a DateTime object, which can be created with `new Date()`. It will NOT be submitted by the client.
 
-## Level 5 - add message _update_ functionality
+## Level 5 - Optional - add message _update_ functionality
 
 If you want, you can also add support for the client to be able to _update_ a message's `text` or `from` property. We'll cover this in the next week of the module, but you can research it easily.
 
@@ -119,21 +119,22 @@ Note: only do this if you have done all other Node homework this week - includin
 
 Note: Do not use `create-react-app` if you want your React code to be code-reviewed! Instead, you should fork our starting repo. See "How should I start my React app", below.
 
-Your UI should at least:
+#### Your UI should at least:
 
 - Display the latest messages on load
 - Provide a "see latest" button to fetch and display the latest messages
 - Provide a "delete" button or a clickable icon next to each message. When clicked this should delete the message from the server and then from the local display.
 
-Optionally, your UI may also:
+#### Optionally, your UI may also:
 
 - Load and re-display the latest messages every 30 seconds.
 - Allow the user to use as much as possible of the back-end that you developed in levels 1-4.
 
-* You'll have to enable CORS on the express app.
+#### Don't forget:
+
+* You'll have to enable CORS on the express app (see note below)
 * Host your react app on netlify
 * Attach the link in your google classroom submission (along with your glitch server url)
-* Link your application from your portfolio.
 
 #### How should I start my React app?
 

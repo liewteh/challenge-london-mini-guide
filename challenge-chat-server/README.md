@@ -18,16 +18,16 @@ In the optional 'React' part of this challenge, you also make a React app which 
 
 ## Level 1 Challenge - make the chat server
 
-Your API _must_ _at_ _least_ allow a client to:
+At this first level, your API must allow a client to:
 
 - Create a new message
 - Read all messages
-- Delete a message, by ID
 - Read one message specified by an ID
+- Delete a message, by ID
 
 All message content should be passed as JSON.
 
-Your routes should match the patterns established in class and in the Quote Server homework. See the later section "Correct Routes" if you need the answer.
+Your routes should match the patterns established in class (RESTful). See the later section "Correct Routes" if you need the answer.
 
 You will need to use the app postman to test deleting a message.
 

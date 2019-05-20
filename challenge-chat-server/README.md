@@ -27,8 +27,7 @@ At this first level, your API must allow a client to:
 
 All message content should be passed as JSON.
 
-Your routes should match the patterns established in class (RESTful). See the later section "Correct Routes" if you need the answer.
-
+Your routes should match the patterns established in class (RESTful). See the later spoiler section "Correct Routes" if you need the answer.
 You will need to use the app postman to test deleting a message.
 
 ### Data model
@@ -57,15 +56,6 @@ If you think you know how to do that, go ahead!
 Try to use what you know to do this challenge on your own. It does not require any new knowledge.
 
 You may find useful the [express cheatsheet](https://github.com/nbogie/express-notes/blob/master/express-cheatsheet.md)
-
-### Correct Routes (Spoiler)
-
-| method | example path | behaviour              |
-| ------ | ------------ | ---------------------- |
-| GET    | /messages    | return all messages    |
-| GET    | /messages/17 | get one message by id  |
-| POST   | /messages    | create a new message   |
-| DELETE | /messages/17 | delete a message by id |
 
 ## End of Level 1 challenge!
 
@@ -171,3 +161,14 @@ and
 
 Read more or CORS [here](https://codeyourfuture.github.io/syllabus-master/others/cors.html)
 and in CORS in Express [here](https://expressjs.com/en/resources/middleware/cors.html).
+
+
+### Spoiler: Correct Routes
+
+| method | example path | behaviour              |
+| ------ | ------------ | ---------------------- |
+| GET    | /messages    | return all messages    |
+| GET    | /messages/17 | get one message by id  |
+| POST   | /messages    | create a new message   |
+| DELETE | /messages/17 | delete a message by id |
+

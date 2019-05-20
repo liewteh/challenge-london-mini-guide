@@ -29,6 +29,8 @@ All message content should be passed as JSON.
 
 Your routes should match the patterns established in class and in the Quote Server homework. See the later section "Correct Routes" if you need the answer.
 
+You will need to use the app postman to test deleting a message.
+
 ### Data model
 
 Each chat message is an object with the following properties:

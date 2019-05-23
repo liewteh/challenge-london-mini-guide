@@ -124,6 +124,7 @@ Note: Do not use `create-react-app` if you want your React code to be code-revie
 #### Don't forget:
 
 * You'll have to enable CORS on the express app (see note below)
+* For how to post JSON, Read ["Using Fetch", on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 * Host your react app on netlify
 * Attach the link in your google classroom submission (along with your glitch server url)
 

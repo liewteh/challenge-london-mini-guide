@@ -136,7 +136,10 @@ The repo is here: https://github.com/CodeYourFuture/cyf-chat-react
 
 - Follow the "Making a Pull Request" guide on https://codeyourfuture.github.io/syllabus-master/others/making-a-pull-request.html
 
+- Then run `npm install` after opening a terminal in the new project directory.
+
 - Note that this repo was made by simply running `create-react-app` exactly as you have done in the past. There is nothing special about it!
+
 
 ### Example screenshot of Simple React app
 

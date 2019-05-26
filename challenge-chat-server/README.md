@@ -28,7 +28,8 @@ At this first level, your API must allow a client to:
 All message content should be passed as JSON.
 
 Your routes should match the patterns established in class (RESTful). See the later spoiler section "Correct Routes" if you need the answer.
-You will need to use the app postman to test deleting a message.
+
+You can use [this chat tester client](https://cyf-chat-tester.netlify.com/) to test your routes.
 
 ### Data model
 

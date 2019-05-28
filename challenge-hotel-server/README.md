@@ -27,6 +27,8 @@ See the later spoiler section "Correct Routes" if you are not sure of the correc
 
 You will need to use the app "postman" to test deleting a booking.
 
+If the booking for deletion cannot be found by id, return a 404.
+
 ## Data model
 
 Each booking is an object with the following properties:
@@ -48,10 +50,9 @@ Each booking is an object with the following properties:
 
 # Start by remixing our example server
 
-Remix this server on glitch - XXXXXXXX
-
+1. Remix this server on glitch - https://glitch.com/~cyf-hotel-start
 1. Name your new server yourname-hotel-server
-1. Make sure you're logged in so that it saves
+1. Make sure you're logged in so that it saves permanently
 1. Check that it is working by making a request to /
 1. Take time to read the comments
 
@@ -79,7 +80,7 @@ For this level, your server must reject requests to create bookings if:
 
 - any property of the booking object is missing or empty.
 
-In this case your server should return a status code of 400.
+In this case your server should return a status code of 400, and should NOT store the booking in the bookings array.
 
 (Advanced note: people don't actually agree on the best status code for this situation.)
 

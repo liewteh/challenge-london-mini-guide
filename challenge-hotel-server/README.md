@@ -18,16 +18,23 @@ At this first level, your API must allow a client to:
 
 1. Create a new booking
 1. Read all bookings
-1. Read one booking specified by an ID
-1. Delete a booking, by ID
+1. Read one booking, specified by an ID
+1. Delete a booking, specified by an ID
+
+If the booking for deletion cannot be found by id, return a 404.
 
 All message content should be passed as JSON.
 
 See the later spoiler section "Correct Routes" if you are not sure of the correct routes.
 
-You will need to use the app "postman" to test deleting a booking.
+### Testing
 
-If the booking for deletion cannot be found by id, return a 404.
+You should use the app "postman" to test creating and deleting bookings.
+
+You can also try with this ALPHA-version [hotel tester app: https://cyf-hotel-tester.netlify.com/](https://cyf-hotel-tester.netlify.com/).
+
+- Note that you'll have to click `set API` and enter your own base URL (e.g. https://alisina-hotel-server.glitch.me)
+- Do not rely on this app for your testing. Be sure to check the javascript console if it misbehaves.
 
 ## Data model
 
@@ -102,6 +109,10 @@ In this level, bookings should also be rejected if:
 
 - email address is not valid (hint: use a library to do this - [search here](https://www.npmjs.com/))
 - checkoutDate is not after checkinDate (hint: use the `moment` library to check this)
+
+# Level 5 (Optional) - make your React app use your new server
+
+For this level, change your react hotel front-end to use your own back-end API that you have designed here in this challenge. Adjust it so that all the functionality works.
 
 # Spoiler: Correct Routes
 

@@ -28,7 +28,8 @@ At this first level, your API must allow a client to:
 All message content should be passed as JSON.
 
 Your routes should match the patterns established in class (RESTful). See the later spoiler section "Correct Routes" if you need the answer.
-You will need to use the app postman to test deleting a message.
+
+You can use [this chat tester client](https://cyf-chat-tester.netlify.com/) to test your routes.
 
 ### Data model
 
@@ -124,6 +125,7 @@ Note: Do not use `create-react-app` if you want your React code to be code-revie
 #### Don't forget:
 
 * You'll have to enable CORS on the express app (see note below)
+* For how to post JSON, Read ["Using Fetch", on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
 * Host your react app on netlify
 * Attach the link in your google classroom submission (along with your glitch server url)
 
@@ -135,7 +137,10 @@ The repo is here: https://github.com/CodeYourFuture/cyf-chat-react
 
 - Follow the "Making a Pull Request" guide on https://codeyourfuture.github.io/syllabus-master/others/making-a-pull-request.html
 
+- Then run `npm install` after opening a terminal in the new project directory.
+
 - Note that this repo was made by simply running `create-react-app` exactly as you have done in the past. There is nothing special about it!
+
 
 ### Example screenshot of Simple React app
 

@@ -23,7 +23,7 @@ At this first level, your API must allow a client to:
 
 If the booking for deletion cannot be found by id, return a 404.
 
-All message content should be passed as JSON.
+All booking content should be passed as JSON.
 
 See the later spoiler section "Correct Routes" if you are not sure of the correct routes.
 

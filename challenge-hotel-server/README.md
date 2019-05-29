@@ -132,6 +132,7 @@ For this level, change your react hotel front-end to use your own back-end API t
 | ------ | -------------------------------- | ------------------------------------------- |
 | GET    | /bookings                        | return all bookings                         |
 | GET    | /bookings/17                     | get one booking by id                       |
+| GET    | /bookings/search?term=jones      | get all bookings matching a search term     |
 | POST   | /bookings                        | create a new booking                        |
 | DELETE | /bookings/17                     | delete a booking by id                      |
 | GET    | /bookings/search?date=2019-05-20 | return all bookings spanning the given date |

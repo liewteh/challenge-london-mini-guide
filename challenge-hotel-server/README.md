@@ -21,6 +21,8 @@ At this first level, your API must allow a client to:
 1. Read one booking, specified by an ID
 1. Delete a booking, specified by an ID
 
+If the booking to be read cannot be found by id, return a 404.
+
 If the booking for deletion cannot be found by id, return a 404.
 
 All booking content should be passed as JSON.
@@ -89,8 +91,6 @@ For this level, your server must reject requests to create bookings if:
 
 In this case your server should return a status code of 400, and should NOT store the booking in the bookings array.
 
-(Advanced note: people don't actually agree on the best status code for this situation.)
-
 # Level 3 (Optional, advanced) - search by date
 
 For this level your API must also allow a client to:
@@ -103,14 +103,26 @@ It should accept requests of the following format:
 
 Hint: use the `moment` library to make this easier.
 
-# Level 4 (Optional) - advanced validation
+# Level 4 (Optional, advanced) - advanced validation
 
 In this level, bookings should also be rejected if:
 
 - email address is not valid (hint: use a library to do this - [search here](https://www.npmjs.com/))
 - checkoutDate is not after checkinDate (hint: use the `moment` library to check this)
 
-# Level 5 (Optional) - make your React app use your new server
+# Level 5 (Optional, easy) - free-text search
+
+For this level your API must also allow a client to:
+
+Search for bookings which match a given search term.
+
+It should accept requests of the following format:
+
+`/bookings/search?term=jones`
+
+It should match if the term occurs in *any* of `email`, `firstName`, or `surname` fields.
+
+# Level 6 (Optional) - make your React app use your new server
 
 For this level, change your react hotel front-end to use your own back-end API that you have designed here in this challenge. Adjust it so that all the functionality works.
 

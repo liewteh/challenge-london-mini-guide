@@ -14,7 +14,7 @@ In the optional 'React' part of this challenge, you also make a React app which 
 
 ## Pre-reqs
 
-- You should have completed at least Level 1 of the Quote Server challenge before attempting this challenge.
+- [ ] You should have completed at least Level 1 of the Quote Server challenge before attempting this challenge.
 
 ## Level 1 Challenge - make the chat server
 

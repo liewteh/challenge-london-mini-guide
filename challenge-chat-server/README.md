@@ -25,6 +25,7 @@ At this first level, your API must allow a client to:
 - [ ] Read one message specified by an ID
 - [ ] Delete a message, by ID
 
+
 - [ ] All message content should be passed as JSON.
 
 - [ ] Your routes should match the patterns established in class (RESTful). See the later spoiler section "Correct Routes" if you need the answer.

@@ -2,7 +2,9 @@
 
 Node Challanges created for Students at CodeYourFuture.
 
-## Add a Challenge
+## Contribution Guide
+
+Want to add a challenge?
 
 A good challenge consists of
 
@@ -12,4 +14,4 @@ A good challenge consists of
 - Is well definined
 - Is targetted to begineer developers
 
-Want to add a challenge? Raise a PR against this repo
+Everyone is welcome to raise a Pull Request on this repository - please share with volunteering and/or students before merging.

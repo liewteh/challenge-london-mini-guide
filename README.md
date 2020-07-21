@@ -14,4 +14,4 @@ A good challenge consists of
 - Is well definined
 - Is targetted to begineer developers
 
-Everyone is welcome to raise a Pull Request on this repository - please share with volunteering and/or students before merging.
+Everyone is welcome to raise a Pull Request on this repository - please share with volunteers and/or students before merging.

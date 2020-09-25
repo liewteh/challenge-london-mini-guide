@@ -21,10 +21,16 @@ You should create an Express app. All of this can be in-memory, no database or f
 The data consists of mailing lists which have a name and an array of member email addresses.
 
 ```json
-{
-  "name": "staff",
-  "members": ["talea@techtonica.org", "michelle@techtonica.org"]
-}
+[
+  {
+    "name": "staff",
+    "members": ["talea@techtonica.org", "michelle@techtonica.org"]
+  },
+  {
+    "name": "students",
+    "members": ["chris@techtonica.org", "hamid@techtonica.org"]
+  }
+]
 ```
 
 ## Routes
@@ -43,7 +49,7 @@ The data consists of mailing lists which have a name and an array of member emai
 #### Response Body
 
 ```json
-["staff", "cohort-h1-2020"]
+["staff", "students"]
 ```
 
 #### Example Express Code
